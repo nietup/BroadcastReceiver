@@ -42,4 +42,8 @@ public class MainActivity extends Activity {
 
         mNotificationManager.notify(324, mBuilder.build());
     }
+
+    public void startListening(View v) {
+        startService(new Intent(this, VeryImportantReceiverService.class));
+    }
 }
