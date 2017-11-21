@@ -20,7 +20,7 @@ public class VeryImportantReceiverService extends Service {
 
     @Override
     public void onDestroy() {
-        //unregisterReceiver(br);
+        unregisterReceiver(br);
     }
 
     @Override

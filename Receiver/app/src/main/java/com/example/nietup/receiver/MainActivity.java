@@ -19,6 +19,12 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        stopService(new Intent(this, VeryImportantReceiverService.class));
+    }
+
     public void notify(View v) {
         Notification.Builder mBuilder =
                 new Notification.Builder(this)

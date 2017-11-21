@@ -27,7 +27,7 @@ public class MainActivity extends Activity {
 
         Intent intent = new Intent();
         intent.setAction("com.example.nietup.broadcaster.VERY_IMPORTANT_MESSAGE");
-        intent.putExtra("data",msg);
+        intent.putExtra(Intent.EXTRA_TEXT, msg);
         sendBroadcast(intent);
 
         Toast.makeText(this, "Message broadcasted", Toast.LENGTH_SHORT).show();

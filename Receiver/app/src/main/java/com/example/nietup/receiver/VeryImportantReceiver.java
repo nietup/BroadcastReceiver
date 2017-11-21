@@ -19,11 +19,13 @@ public class VeryImportantReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
 
+        String notificationMessage = intent.getStringExtra(Intent.EXTRA_TEXT);
+
         Notification.Builder mBuilder =
                 new Notification.Builder(context)
                         .setSmallIcon(R.drawable.ic_launcher_foreground)
                         .setContentTitle("My notification")
-                        .setContentText("Hello World!");
+                        .setContentText(notificationMessage);
 
         Intent resultIntent = new Intent(context, MainActivity.class);
 
