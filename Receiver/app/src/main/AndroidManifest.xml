@@ -2,6 +2,17 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.nietup.receiver">
 
+    <permission-group
+        android:name="com.example.nietup.my_permissions"
+        android:label="my permissions group" />
+
+    <permission
+        android:name="com.example.nietup.my_permissions.MY_PERMISSION"
+        android:label="my permission"
+        android:permissionGroup="com.example.nietup.my_permissions" />
+
+    <uses-permission android:name="com.example.nietup.my_permissions.MY_PERMISSION" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,6 +27,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <service
+            android:name=".VeryImportantReceiverService"
+            android:enabled="true"
+            android:exported="true" />
     </application>
 
 </manifest>

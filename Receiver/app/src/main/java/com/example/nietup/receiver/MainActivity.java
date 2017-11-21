@@ -9,6 +9,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
@@ -45,5 +46,6 @@ public class MainActivity extends Activity {
 
     public void startListening(View v) {
         startService(new Intent(this, VeryImportantReceiverService.class));
+        Toast.makeText(this, "Broadcast listener started", Toast.LENGTH_SHORT).show();
     }
 }

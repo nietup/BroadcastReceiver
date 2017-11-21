@@ -18,4 +18,13 @@
         </activity>
     </application>
 
+    <permission-group android:name="com.example.nietup.my_permissions"
+        android:label="my permissions group" />
+
+    <permission android:name="com.example.nietup.my_permissions.MY_PERMISSION"
+        android:permissionGroup="com.example.nietup.my_permissions"
+        android:label="my permission" />
+
+    <uses-permission android:name="com.example.nietup.my_permissions.MY_PERMISSION" />
+
 </manifest>

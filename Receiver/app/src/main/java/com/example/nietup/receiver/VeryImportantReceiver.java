@@ -7,6 +7,7 @@ import android.app.TaskStackBuilder;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 
 /**
  * Created by nietup on 11/21/2017.
@@ -40,5 +41,7 @@ public class VeryImportantReceiver extends BroadcastReceiver {
                 (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
 
         mNotificationManager.notify(324, mBuilder.build());
+
+        Log.i("RECEIVER", "Notification is received");
     }
 }
